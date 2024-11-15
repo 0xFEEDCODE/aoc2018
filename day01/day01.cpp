@@ -2,7 +2,10 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <iostream>
 #include <map>
+#include <string>
+
 #include "../utilslib/utilslib.h"
 
 using namespace std;
@@ -31,7 +34,7 @@ int main(int argc, char* argv[])
     }
 
 
-    print(ans1);
+    PRINT(ans1);
     
     map<int, char> capturedFrequencies;
     int freq = 0;
@@ -40,16 +43,7 @@ int main(int argc, char* argv[])
     rewind_stdin_on_eof();
     while (fgets(buffer, sizeof(buffer), stdin) != nullptr)
     {
-        int value = atoi(buffer + 1);
-
-        if (buffer[0] == '+')
-        {
-            freq += value;
-        }
-        else
-        {
-            freq -= value;
-        }
+        freq += stoi(buffer);
         
         if(capturedFrequencies[freq] != 0)
         {
@@ -62,7 +56,7 @@ int main(int argc, char* argv[])
         rewind_stdin_on_eof();
     }
     
-    print(ans2);
+    PRINT(ans2);
     
     return 0;
 }
