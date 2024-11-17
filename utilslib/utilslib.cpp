@@ -23,3 +23,14 @@ bool redirect_file_to_stdin(const char* filename)
     }
     return true;
 }
+
+bool redirect_inp_to_stdin()
+{
+    FILE *file;
+    if (freopen_s(&file, "inp.txt", "r", stdin) != 0)
+    {
+        perror("Error opening file");
+        return false;
+    }
+    return true;
+}

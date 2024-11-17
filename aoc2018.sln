@@ -8,6 +8,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day02", "day02\day02.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day03", "day03\day03.vcxproj", "{18ADFAF6-849F-490D-A1C6-62BB902C0935}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day04", "day04\day04.vcxproj", "{04A99358-038D-495B-B805-1AC9D35AED95}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "day05", "day05\day05.vcxproj", "{1F294F15-21D1-4407-B1D6-0B217ADC10E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -48,5 +52,21 @@ Global
 		{18ADFAF6-849F-490D-A1C6-62BB902C0935}.Release|Win32.Build.0 = Release|Win32
 		{18ADFAF6-849F-490D-A1C6-62BB902C0935}.Release|x64.ActiveCfg = Release|x64
 		{18ADFAF6-849F-490D-A1C6-62BB902C0935}.Release|x64.Build.0 = Release|x64
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Debug|Win32.Build.0 = Debug|Win32
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Debug|x64.ActiveCfg = Debug|x64
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Debug|x64.Build.0 = Debug|x64
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Release|Win32.ActiveCfg = Release|Win32
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Release|Win32.Build.0 = Release|Win32
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Release|x64.ActiveCfg = Release|x64
+		{04A99358-038D-495B-B805-1AC9D35AED95}.Release|x64.Build.0 = Release|x64
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Debug|Win32.Build.0 = Debug|Win32
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Debug|x64.ActiveCfg = Debug|x64
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Debug|x64.Build.0 = Debug|x64
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Release|Win32.ActiveCfg = Release|Win32
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Release|Win32.Build.0 = Release|Win32
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Release|x64.ActiveCfg = Release|x64
+		{1F294F15-21D1-4407-B1D6-0B217ADC10E0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 EndGlobal

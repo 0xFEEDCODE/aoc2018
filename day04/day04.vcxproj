@@ -109,6 +109,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,10 +155,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="day4.cpp" />
+    <ClCompile Include="day04.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="inp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\utilslib\utilslib.vcxproj">
+      <Project>{59be66e6-8360-4204-8e59-7fd2890c993a}</Project>
+      <Name>utilslib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
