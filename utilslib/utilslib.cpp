@@ -13,10 +13,10 @@ void rewind_stdin_on_eof()
     }
 }
 
-bool redirect_file_to_stdin(const char* filename)
+bool redirect_file_to_stdin(const char *filename)
 {
-    FILE *file;
-    if (freopen_s(&file, filename, "r", stdin) != 0)
+    FILE *file = freopen(filename, "r", stdin);
+    if (file == nullptr)
     {
         perror("Error opening file");
         return false;
@@ -26,8 +26,8 @@ bool redirect_file_to_stdin(const char* filename)
 
 bool redirect_inp_to_stdin()
 {
-    FILE *file;
-    if (freopen_s(&file, "inp.txt", "r", stdin) != 0)
+    FILE *file = freopen("inp.txt", "r", stdin);
+    if (file == nullptr)
     {
         perror("Error opening file");
         return false;
