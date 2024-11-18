@@ -14,7 +14,19 @@
             "MIMode": "lldb",
             "preLaunchTask": "C/C++: clang build active file",
             "internalConsoleOptions": "openOnSessionStart",
-            "redirectOutput": true
+        },
+        {
+            "name": "C/C++: cl.exe build and debug active file",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "C/C++: cl.exe build active file",
+            "internalConsoleOptions": "openOnSessionStart",
         }
     ]
 }
