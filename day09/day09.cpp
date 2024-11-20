@@ -1,11 +1,10 @@
 #include "../utilslib/utilslib.h"
 #include <algorithm>
+#include <cstdint>
 #include <iostream>
 #include <map>
-#include <queue>
 #include <set>
 #include <sstream>
-#include <stack>
 #include <string>
 #include <vector>
 
@@ -13,9 +12,26 @@ struct Window
 {
     Window(int capacity) : capacity(capacity), n_elements(0)
     {
+        for (int i = 0; i < capacity; i++)
+        {
+            window[i] = UNINTIALZED_FIELD_VALUE;
+        }
+    }
+
+    int operator[](int index) const
+    {
+        auto it = window.find(index);
+        if (it != window.end())
+        {
+            return it->second;
+        }
+        return -1;
+
+        // throw logic_error("No element found");
     }
 
   private:
+    const int UNINTIALZED_FIELD_VALUE = -1;
     map<int, int> window;
     int capacity;
     int n_elements;
@@ -29,43 +45,58 @@ struct Window
     {
         return n_elements;
     }
-    void InsertAt(int insert_pos, int value)
+    void RemoveHead()
     {
-        for (int i = capacity; i > insert_pos; i--)
+        for (int i = 0; i < capacity; i++)
         {
-            window[i] = window[i - 1];
+            if (window[i] != UNINTIALZED_FIELD_VALUE)
+            {
+                window[i] = UNINTIALZED_FIELD_VALUE;
+                n_elements--;
+                break;
+            }
         }
+    }
+    void InsertAtTail(int value)
+    {
+        auto tail_idx = capacity - 1;
+        InsertShiftLeft(tail_idx, value);
+    }
+
+    void InsertShiftLeft(int insert_pos, int value)
+    {
+        // Shift all the elements before insert pos to the left
+        for (int i = 0; i <= insert_pos - 1; i++)
+        {
+            if (window[i + 1] == UNINTIALZED_FIELD_VALUE)
+            {
+                continue;
+            }
+            window[i] = window[i + 1];
+        }
+
         window[insert_pos] = value;
+        n_elements = min(n_elements + 1, capacity);
     }
-    void SlideLeft(int slide_by, int slide_limit = -1)
+
+    void InsertShiftRight(int insert_pos, int value)
     {
-        for (int i = 0; i < (slide_limit > -1 ? slide_limit : capacity); i++)
+        if (insert_pos < n_elements)
         {
-            if (i >= (capacity - slide_by))
+            // Shift all the elements after insert pos to the right
+            for (int i = capacity; i > insert_pos; i--)
             {
-                window[i] = -1;
+                if (window[i - 1] == UNINTIALZED_FIELD_VALUE)
+                {
+                    continue;
+                }
+                window[i] = window[i - 1];
             }
-            else if (window[i + slide_by] != -1)
-            {
-                window[i] = window[i + slide_by];
-            }
         }
-    }
-    void SetAtIndex(int index, int value)
-    {
-        if (!window.contains(index))
-        {
-            n_elements++;
-        }
-        window[index] = value;
-    }
-    void SetLast(int value)
-    {
-        if (!window.contains(capacity - 1))
-        {
-            n_elements++;
-        }
-        window[capacity - 1] = value;
+
+        window[insert_pos] = value;
+
+        n_elements = min(n_elements + 1, capacity);
     }
     void Print()
     {
@@ -130,91 +161,47 @@ int main(int argc, char *argv[])
     uint32_t last_max_score = 0;
 
     n_players = 10;
-    last_marble_worth = 3000;
-
-    map<int, int> front;
-    const int FRONT_SIZE = 30;
-    for (int i = 0; i < FRONT_SIZE; i++)
-    {
-        front[i] = -1;
-    }
+    last_marble_worth = 1618;
 
     int c = -1;
     int window_start_idx = -1;
     int window_end_idx = -1;
 
-    Window window = Window(8);
+    const int FRONT_SIZE = 1024;
+    Window last_7_marbles_wnd = Window(8);
+    Window front_7_marbles_wnd = Window(FRONT_SIZE);
 
     int n_marbles = 0;
 
+    map<int, int> magic_map;
+
+    int magic_idx = 0;
+    int magic_size = 0;
+    int n_turnarounds = 0;
+
+    int prev_marble_idx = -1;
+
     while (current_marble != last_marble_worth)
     {
-        int board_len = board.size();
-        int position_to_insert_at = 0;
+        int new_marble_idx = 0;
         int new_marble = current_marble + 1;
 
         if (new_marble > 0 && new_marble % 23 == 0)
         {
-            n_marbles--;
+            magic_size++;
+
             scores[player_turn] += new_marble;
-
-            auto pop_marble_idx = (current_marble_idx - 7 + board_len) % board_len;
-            if (pop_marble_idx < FRONT_SIZE)
-            {
-                scores[player_turn] += front[pop_marble_idx];
-                for (int i = pop_marble_idx; i < (30 - pop_marble_idx); i++)
-                {
-                    if (front[i] != -1)
-                    {
-                        front[i] = front[i + 1];
-                    }
-                }
-            }
-            else
-            {
-                cout << pop_marble_idx << " " << board_len << " " << current_marble_idx << endl;
-            }
-
-            scores[player_turn] += board[pop_marble_idx];
-
-            board.erase(board.begin() + current_marble_idx);
+            scores[player_turn] += last_7_marbles_wnd[0];
+            last_7_marbles_wnd.RemoveHead();
         }
         else
         {
-            if (board_len > 0)
-            {
-                if (board_len == 1 || current_marble_idx + 2 == board_len)
-                {
-                    position_to_insert_at = board_len;
-                }
-                else
-                {
-                    position_to_insert_at = (current_marble_idx + 2) % (board_len);
-                }
-            }
+            magic_size++;
 
-            board.insert(board.begin() + position_to_insert_at, new_marble);
-            n_marbles++;
+            magic_idx = magic_idx++;
 
-            if (position_to_insert_at < FRONT_SIZE)
-            {
-                front[position_to_insert_at] = new_marble;
-            }
-
-            // THIS IS WHERE I LEFT AT
-            // NEED OT IMPLEMENT HOW THE WINDOW IS MAINTAINED, IT HAS TO BE MODIFIED ON ROUDNABOUT
-            if (window.GetSize() < window.GetCapacity())
-            {
-                window.InsertAt(position_to_insert_at, new_marble);
-            }
-            // THIS IS WHERE I LEFT AT
-
-            if (n_marbles > window.GetCapacity())
-            {
-                cout << "";
-            }
-
-            current_marble_idx = position_to_insert_at;
+            prev_marble_idx = current_marble_idx;
+            current_marble_idx = new_marble_idx;
         }
 
         current_marble = new_marble;
@@ -241,3 +228,32 @@ int main(int argc, char *argv[])
 
     return 0;
 }
+
+// if (new_marble_idx < FRONT_SIZE)
+// {
+//     front_7_marbles_wnd.InsertShiftRight(new_marble_idx, new_marble);
+// }
+
+// if (new_marble_idx <= FRONT_SIZE)
+// {
+//     if (new_marble_idx <= current_marble_idx)
+//     {
+//         for (int i = 0; i < new_marble_idx; i++)
+//         {
+//             last_7_marbles_wnd.RemoveHead();
+//             last_7_marbles_wnd.InsertAtTail(front_7_marbles_wnd[i]);
+//         }
+//     }
+//     else
+//     {
+//         for (int i = current_marble_idx + 1; i < new_marble_idx; i++)
+//         {
+//             last_7_marbles_wnd.RemoveHead();
+//             last_7_marbles_wnd.InsertAtTail(front_7_marbles_wnd[i]);
+//         }
+//     }
+// }
+// last_7_marbles_wnd.InsertAtTail(new_marble);
+
+// front_7_marbles_wnd.Print();
+// last_7_marbles_wnd.Print();

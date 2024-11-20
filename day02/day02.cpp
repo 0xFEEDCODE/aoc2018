@@ -13,7 +13,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    redirect_file_to_stdin(argv[1]);
+    redirect_inp_to_stdin();
 
     char buffer[256];
 

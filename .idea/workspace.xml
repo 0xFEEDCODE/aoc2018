@@ -1,20 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Environment/ExternalSources/Decompiler/DecompileMethodBodies/@EntryValue" value="true" type="bool" />
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="aoc2018_new" targetName="day03" />
+      <config projectName="aoc2018_new" targetName="day04" />
+      <config projectName="aoc2018_new" targetName="day05" />
+      <config projectName="aoc2018_new" targetName="day06" />
+      <config projectName="aoc2018_new" targetName="day01" />
+      <config projectName="aoc2018_new" targetName="day02" />
+      <config projectName="aoc2018_new" targetName="day07" />
+      <config projectName="aoc2018_new" targetName="day08" />
+      <config projectName="aoc2018_new" targetName="day09" />
+      <config projectName="aoc2018_new" targetName="utilslib" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb27ef2c-c365-44a4-8341-45ea0eacb779" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.aoc2018/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+    <list default="true" id="ef1bf161-0886-458a-b1c0-8584604c3f11" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.aoc2018/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.aoc2018/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.aoc2018/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.aoc2018/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aoc2018.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/aoc2018/xs/UserPrefs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/c_cpp_properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoc2018.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoc2018.sln.DotSettings.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoc2018.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aoc2018.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/day01.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day01/day01.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/day01.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day01/day01.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/day02.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day02/day02.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/day02.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day02/day02.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/day03.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day03/day03.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/day04.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/day04.dSYM/Contents/Resources/DWARF/day04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/day04.dSYM/Contents/Resources/Relocations/aarch64/day04.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/day04.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day04/day4.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/day05.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/day05.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.exe.recipe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/Cl.items.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/day05.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/link.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/link.secondary.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/day05.tlog/link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/vc143.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day05/x64/Debug/vc143.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.dSYM/Contents/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.dSYM/Contents/Resources/DWARF/day06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.dSYM/Contents/Resources/Relocations/aarch64/day06.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/day06.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/utilslib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day06/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/day07.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/day07.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/day07.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/day07.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/utilslib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day07/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/day08.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/day08.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/day08.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/day08.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/utilslib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day08/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/day09.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/day09/day09.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/day09.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/day09.ilk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/day09.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/day09.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/utilslib.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/day09/vc140.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilslib/utilslib.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilslib/utilslib.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/HelperLib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/HelperLib.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/aoc2018.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day01.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day01.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day02.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day02.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day03.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day03.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day04.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day04.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day05.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/day05.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/helper.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/helperLib.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/utilslib.idb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/utilslib.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/utilslib.pdb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,13 +144,35 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
-  <component name="ProjectId" id="2p1Mr8xuAf9kXZ7uCBHKFtVcMh9" />
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/utilslib/utilslib.cpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="2.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2p6w6il8SMjJW4qYXlxnk3stHI5" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -38,43 +180,150 @@
     <option name="showLibraryContents" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.day08.cpp.executor": "Run",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/git/aoc2018",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.aoc2018_new.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.day01.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.day02.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.day09.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.aoc2018.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.aoc2018_new.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/git/aoc2018&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="day08.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018" TARGET_NAME="day08.cpp" CONFIG_NAME="day08.cpp">
-      <option name="sourceFile" value="day08\day08.cpp" />
+}</component>
+  <component name="RunManager" selected="CMake Application.day09">
+    <configuration name="aoc2018" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="day01" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day01" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day01">
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="day02" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day02" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day02">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day03" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day03" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day03">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day04" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day04" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day04">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day05" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day05" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day05">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day06" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day06" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day06">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day07" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day07" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day08" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day08" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day08">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="day09" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="day09" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aoc2018_new" RUN_TARGET_NAME="day09">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="utilslib" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aoc2018_new" TARGET_NAME="utilslib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.day01" />
+      <item itemvalue="CMake Application.day02" />
+      <item itemvalue="CMake Application.day03" />
+      <item itemvalue="CMake Application.day04" />
+      <item itemvalue="CMake Application.day05" />
+      <item itemvalue="CMake Application.day06" />
+      <item itemvalue="CMake Application.day07" />
+      <item itemvalue="CMake Application.day08" />
+      <item itemvalue="CMake Application.day09" />
+      <item itemvalue="CMake Application.utilslib" />
+      <item itemvalue="CMake Debug.aoc2018" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="CMake Debug.aoc2018" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb27ef2c-c365-44a4-8341-45ea0eacb779" name="Changes" comment="" />
-      <created>1731929323917</created>
+      <changelist id="ef1bf161-0886-458a-b1c0-8584604c3f11" name="Changes" comment="" />
+      <created>1732099659364</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1731929323917</updated>
-      <workItem from="1731929324884" duration="99000" />
+      <updated>1732099659364</updated>
+      <workItem from="1732099660842" duration="318000" />
+      <workItem from="1732100012474" duration="1000" />
+      <workItem from="1732100108389" duration="107000" />
+      <workItem from="1732100224540" duration="139000" />
+      <workItem from="1732100374815" duration="4000" />
+      <workItem from="1732100390508" duration="160000" />
+      <workItem from="1732100689756" duration="19000" />
+      <workItem from="1732102952624" duration="14000" />
+      <workItem from="1732103277698" duration="20000" />
+      <workItem from="1732110988025" duration="510000" />
+      <workItem from="1732111513448" duration="219000" />
+      <workItem from="1732111762149" duration="33000" />
+      <workItem from="1732119408651" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

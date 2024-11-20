@@ -2,9 +2,12 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <map>
 #include <string>
+#include <bits/fs_fwd.h>
+#include <bits/fs_path.h>
 
 #include "../utilslib/utilslib.h"
 
@@ -12,9 +15,7 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-    puts(argv[1]);
-
-    redirect_file_to_stdin(argv[1]);
+    redirect_inp_to_stdin();
 
     int ans1 = 0;
     
