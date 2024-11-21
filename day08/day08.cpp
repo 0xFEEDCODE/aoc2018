@@ -1,4 +1,5 @@
 
+#include <cstdint>
 #include <iterator>
 
 #include "../utilslib/utilslib.h"

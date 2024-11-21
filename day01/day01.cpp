@@ -34,7 +34,6 @@ int main(int argc, char* argv[])
         }
     }
 
-
     PRINT(ans1);
     
     map<int, char> capturedFrequencies;
