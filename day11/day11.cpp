@@ -1,6 +1,4 @@
-﻿
-
-#include <cmath>
+﻿#include <cmath>
 #include <limits>
 #include <vector>
 
@@ -38,7 +36,7 @@ int get_power_level(const int x, const int y, const int grid_serial_number)
             if (power_level < 1000)
             {
                 int hundred_digit = 0;
-                while ((hundred_digit * 100) < power_level)
+                while (hundred_digit * 100 <= power_level)
                 {
                     hundred_digit++;
                 }
@@ -86,10 +84,6 @@ int main()
             }
             if (sum > largest_sum)
             {
-                if (sum == 29)
-                {
-                    cout << " ";
-                }
                 largest_sum = sum;
                 largest_pos = {x, y};
             }
@@ -98,42 +92,33 @@ int main()
     cout << largest_sum << endl;
     cout << largest_pos.first << " " << largest_pos.second << endl;
 
+    pair<pair<int, int>, int> largest_pos_and_size;
     largest_sum = numeric_limits<int32_t>::min();
-    for (int y = 0; y < GRID_DIM - 1; y++)
+    for (int y = 0; y < GRID_DIM; y++)
     {
-        for (int x = 0; x < GRID_DIM - 1; x++)
+        for (int x = 0; x < GRID_DIM; x++)
         {
-            int size = 1;
-            int coord_offset = pow(size, 2);
-
             int32_t sum = 0;
-
-            while (x + coord_offset < GRID_DIM)
+            int size = 0;
+            while (x + size < GRID_DIM && y + size < GRID_DIM)
             {
-                auto new_coord_offset = pow(++size, 2);
-                auto diff = new_coord_offset - coord_offset;
-
-                int c = 0;
-                for (int i = coord_offset; i < new_coord_offset; i++)
+                for (int i = 0; i < size; i++)
                 {
-                    for (int j = coord_offset; j < new_coord_offset; j++)
-                    {
-                        c++;
-                        sum += grid[y + i][x + j];
-                        if (sum > largest_sum)
-                        {
-                            cout << largest_sum << endl;
-                            largest_sum = sum;
-                            largest_pos = {x, y};
-                        }
-                    }
+                    sum += grid[y + size][x + i];
+                    sum += grid[y + i][x + size];
                 }
-                coord_offset = new_coord_offset;
-                cout << c << endl;
+                sum += grid[y + size][x + size];
+                size++;
+
+                if (sum > largest_sum)
+                {
+                    largest_sum = sum;
+                    largest_pos_and_size = {{x, y}, size};
+                }
             }
         }
     }
     cout << largest_sum << endl;
-    cout << largest_pos.first << " " << largest_pos.second;
+    cout << largest_pos_and_size.first.first << " " << largest_pos_and_size.first.second << " " << largest_pos_and_size.second;
 }
 
