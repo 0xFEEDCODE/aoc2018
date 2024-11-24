@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <iosfwd>
 #include <iostream>
 
 using namespace std;
@@ -11,19 +12,29 @@ struct point2d
     int32_t x;
     int32_t y;
 
-  public:
+    point2d(int32_t x, int32_t y) : x(x), y(y)
+    {
+    }
+
+public:
     void Print()
     {
         cout << x << " " << y << endl;
+    }
+
+    bool operator==(const point2d& other) const
+    {
+        return x == other.x && y == other.y;
     }
 };
 
 void rewind_stdin_on_eof();
 
-bool redirect_file_to_stdin(const char *filename);
+bool redirect_file_to_stdin(const char* filename);
 bool redirect_inp_to_stdin();
 
-inline void reset_stdin_to_console() {
+inline void reset_stdin_to_console()
+{
     freopen("CON", "r", stdin);
 }
 

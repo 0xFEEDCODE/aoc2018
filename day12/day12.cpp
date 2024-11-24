@@ -9,16 +9,22 @@
 struct note
 {
     bool has_plant;
-    note* next_plant;
-    note* next_no_plant;
+    note *next_plant;
+    note *next_no_plant;
 
-    explicit note(const bool has_plant) : has_plant(has_plant), next_plant(nullptr), next_no_plant(nullptr)
+    explicit note(const bool has_plant) :
+        has_plant(has_plant), next_plant(nullptr), next_no_plant(nullptr)
     {
     }
 };
 
-bool willGrowPlant(const string& state, const note* note)
+bool willGrowPlant(const string &state, const note *note, map<string, bool> &configurations)
 {
+    if (configurations.find(state) != configurations.end())
+    {
+        return configurations[state];
+    }
+
     auto current_note = note;
     for (const char ch : state)
     {
@@ -32,15 +38,18 @@ bool willGrowPlant(const string& state, const note* note)
         }
         if (current_note == nullptr)
         {
+            configurations[state] = false;
             return false;
         }
     }
     if (current_note->next_plant != nullptr)
     {
+        configurations[state] = true;
         return true;
     }
     if (current_note->next_no_plant != nullptr)
     {
+        configurations[state] = false;
         return false;
     }
 
@@ -52,19 +61,24 @@ bool willGrowPlant(const string& state, const note* note)
     throw logic_error("wtf2");
 }
 
-void expand(string& current_configuration)
+pair<int, int> expand(string &current_configuration)
 {
-    if (current_configuration[0] == '#')
+    int expand_l = 0;
+    int expand_r = 0;
+    if (current_configuration.substr(0, 4) != "....")
     {
-        current_configuration = ".." + current_configuration;
+        current_configuration = "...." + current_configuration;
+        expand_l += 4;
     }
-    if (current_configuration[current_configuration.size() - 1] == '#')
+    if (current_configuration.substr(current_configuration.size() - 4, 4) != "....")
     {
-        current_configuration += "..";
+        current_configuration += "....";
+        expand_r += 4;
     }
+    return make_pair(expand_l, expand_r);
 }
 
-int count(const int padding_size, const string& current_configuration)
+int count(const int padding_size, const string &current_configuration)
 {
     int sum = 0;
     for (int i = 0; i < current_configuration.size(); i++)
@@ -75,6 +89,19 @@ int count(const int padding_size, const string& current_configuration)
         }
     }
     return sum;
+}
+
+uint32_t getSumOfPlants(const string &current_configuration, int left_shift)
+{
+    uint32_t s = 0;
+    for (int i = 0; i < current_configuration.size(); i++)
+    {
+        if (current_configuration[i] == '#')
+        {
+            s += i - left_shift;
+        }
+    }
+    return s;
 }
 
 int main()
@@ -99,7 +126,7 @@ int main()
     auto root = note(false);
     while (getline(cin, line))
     {
-        note* current_note = &root;
+        note *current_note = &root;
 
         for (int i = 0; i < line.size(); i++)
         {
@@ -129,78 +156,33 @@ int main()
 
     string current_configuration = initial_configuration;
 
-    map<string, int> configurations;
+    map<string, bool> configurations;
+
+    int left_shift = 0;
+    int64_t prev_sum = 0;
 
     //cout << endl << current_configuration << endl;
-    for (int i = 0; i < 20; i++)
+    for (uint32_t i = 0; i < 10000; i++)
     {
         stringstream ss;
 
-        int start = 0;
-        if (IS_PLANT(current_configuration[0]))
-        {
-            current_configuration = ".." + current_configuration;
-            start = 2;
-            ss << "..";
-        }
-        else if (IS_PLANT(current_configuration[1]))
-        {
-            current_configuration = "." + current_configuration;
-            start = 1;
-            ss << ".";
-        }
+        auto [expand_left, _] = expand(current_configuration);
 
-        if (IS_PLANT(current_configuration[current_configuration.size()-1]))
+        for (auto j = 2; j < current_configuration.size() - 2; j++)
         {
-            current_configuration += "..";
+            auto str = current_configuration.substr(j - 2, 5);
+            ss << (willGrowPlant(str, &root, configurations) ? '#' : '.');
         }
-        else if (IS_PLANT(current_configuration[current_configuration.size()-2]))
-        {
-            current_configuration += ".";
-        }
-        int len = current_configuration.size();
-        for (int j = 0; j < len; j++)
-        {
-            if (IS_PLANT(current_configuration[i]))
-            {
-                start = j;
-            }
-        }
-
-        for (int j = start; j < len; j++)
-        {
-            auto str = current_configuration.substr(j - start, 5);
-            if (str.size() == 3)
-            {
-                if (str == "..")
-                {
-                    ss << "..";
-                }
-                else if (str[0] == '.')
-                {
-                    ss << '.';
-                }
-            }
-            else
-            {
-                ss << (willGrowPlant(str, &root) ? '#' : '.');
-            }
-            //cout << str << endl;
-        }
-
+        left_shift += expand_left - 2;
         ss >> current_configuration;
-        /*
-        if (configurations.find(current_configuration) != configurations.end())
-        {
-            cout << "yes!";
-        }
-        */
-        cout << endl << current_configuration << endl;
-        configurations[current_configuration]++;
-        /*
-        int sum = count(padding.size(), current_configuration);
-        cout << sum << endl;
-        */
-        //cout << current_configuration << endl;
+
+        int64_t s = getSumOfPlants(current_configuration, left_shift);
+        cout << s << " " << prev_sum - s << endl;
+        prev_sum = s;
     }
+
+    cout << (50000000000 - 10000) * 96 + prev_sum << endl;
 }
+
+
+
