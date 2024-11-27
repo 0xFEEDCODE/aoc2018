@@ -23,10 +23,10 @@ struct velocity
 struct entry
 {
     velocity velocity;
-    point2d position;
+    Point2D position;
 
 public:
-    point2d GetPosAtSecond(int second) const
+    Point2D GetPosAtSecond(int second) const
     {
         const auto x = position.x + (velocity.x * second);
         const auto y = position.y + (velocity.y * second);

@@ -16,7 +16,7 @@ enum IntersectionChoice
 
 struct Cart
 {
-    point2d Position;
+    Point2D Position;
     Direction Direction;
     IntersectionChoice NextIntersectionDecision;
     bool IsOutOfOrder = false;
@@ -261,12 +261,12 @@ int main()
             if (ch == '^' || ch == 'v')
             {
                 grid[r][c] = '|';
-                carts.emplace_back(Cart{point2d(c, r), convertToDirection(ch), IC_LEFT});
+                carts.emplace_back(Cart{Point2D(c, r), convertToDirection(ch), IC_LEFT});
             }
             else if (ch == '<' || ch == '>')
             {
                 grid[r][c] = '-';
-                carts.emplace_back(Cart{point2d(c, r), convertToDirection(ch), IC_LEFT});
+                carts.emplace_back(Cart{Point2D(c, r), convertToDirection(ch), IC_LEFT});
             }
             else
             {

@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <vector>
 
-int get_manhattan_dist(const point2d *a, const point2d *b)
+int get_manhattan_dist(const Point2D *a, const Point2D *b)
 {
     return abs(a->x - b->x) + abs(a->y - b->y);
 }
@@ -12,7 +12,7 @@ int get_manhattan_dist(const point2d *a, const point2d *b)
 struct point2dWithId
 {
     int id;
-    point2d point;
+    Point2D point;
     int x = point.x;
     int y = point.y;
 
@@ -129,7 +129,7 @@ int main(int argc, char *argv[])
             int dist_to_all_points = 0;
             for (const auto &p : points)
             {
-                dist_to_all_points += get_manhattan_dist(new point2d{x, y}, &p.point);
+                dist_to_all_points += get_manhattan_dist(new Point2D{x, y}, &p.point);
                 if (dist_to_all_points >= 10000)
                 {
                     break;

@@ -14,7 +14,7 @@ struct Window
     {
         for (int i = 0; i < capacity; i++)
         {
-            window[i] = UNINTIALZED_FIELD_VALUE;
+            window[i] = UNINITIALIZED_FIELD_VALUE;
         }
     }
 
@@ -31,7 +31,7 @@ struct Window
     }
 
   private:
-    const int UNINTIALZED_FIELD_VALUE = -1;
+    const int UNINITIALIZED_FIELD_VALUE = -1;
     map<int, int> window;
     int capacity;
     int n_elements;
@@ -49,9 +49,9 @@ struct Window
     {
         for (int i = 0; i < capacity; i++)
         {
-            if (window[i] != UNINTIALZED_FIELD_VALUE)
+            if (window[i] != UNINITIALIZED_FIELD_VALUE)
             {
-                window[i] = UNINTIALZED_FIELD_VALUE;
+                window[i] = UNINITIALIZED_FIELD_VALUE;
                 n_elements--;
                 break;
             }
@@ -68,7 +68,7 @@ struct Window
         // Shift all the elements before insert pos to the left
         for (int i = 0; i <= insert_pos - 1; i++)
         {
-            if (window[i + 1] == UNINTIALZED_FIELD_VALUE)
+            if (window[i + 1] == UNINITIALIZED_FIELD_VALUE)
             {
                 continue;
             }
@@ -86,7 +86,7 @@ struct Window
             // Shift all the elements after insert pos to the right
             for (int i = capacity; i > insert_pos; i--)
             {
-                if (window[i - 1] == UNINTIALZED_FIELD_VALUE)
+                if (window[i - 1] == UNINITIALIZED_FIELD_VALUE)
                 {
                     continue;
                 }
