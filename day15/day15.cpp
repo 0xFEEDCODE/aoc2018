@@ -252,8 +252,8 @@ vector<shared_ptr<NPC>> getAttackTargets(const vector<vector<shared_ptr<Field>>>
     return targets;
 }
 
-optional<int> getDistanceToTarget(const vector<vector<shared_ptr<Field>>> &grid, const Point2D &origin,
-                                  const Point2D &target)
+optional<int> getShortestDistanceToTarget(const vector<vector<shared_ptr<Field>>> &grid, const Point2D &origin,
+                                          const Point2D &target)
 {
     if (target == origin)
     {
@@ -342,7 +342,7 @@ optional<Point2D> getNextPositionTowardsNextEnemy(const vector<vector<shared_ptr
         }
 
         // Probe if the target is reachable and if it is, check if shorter path was not found already
-        auto distanceToTarget = getDistanceToTarget(grid, originPos, enemyNpc->Position);
+        auto distanceToTarget = getShortestDistanceToTarget(grid, originPos, enemyNpc->Position);
         if (distanceToTarget == nullopt)
         {
             continue;
@@ -388,7 +388,7 @@ optional<Point2D> getNextPositionTowardsNextEnemy(const vector<vector<shared_ptr
         optional<pair<Point2D, int>> firstStepAndDist;
         for (auto startPoint : squaresNextToOrigin)
         {
-            auto dist = getDistanceToTarget(grid, startPoint, target.value());
+            auto dist = getShortestDistanceToTarget(grid, startPoint, target.value());
             if (!dist.has_value())
             {
                 continue;
